@@ -1,0 +1,49 @@
+{
+  "extends": ["airbnb", "prettier", "prettier/react"],
+  "plugins": ["prettier", "react", "babel", "react-hooks"],
+  "parser": "babel-eslint",
+  "rules": {
+    "prettier/prettier": "error",
+    "semi": ["error", "never"],
+    "react-hooks/rules-of-hooks": "error",
+    "react/react-in-jsx-scope": "off",
+    "react/require-default-props": 0,
+    "react/destructuring-assignment": 0,
+    "react/forbid-prop-types": 0,
+    "import/imports-first": ["error", "absolute-first"],
+    "import/newline-after-import": "error",
+    "react/jsx-filename-extension": [1, {
+      "extensions": [".js", ".jsx"]
+    }],
+    "jsx-a11y/anchor-is-valid": ["error", {
+      "components": ["Link"]
+    }],
+    "jsx-a11y/accessible-emoji": 0,
+    "linebreak-style": [
+      "error",
+      "windows"
+    ]
+  },
+  "globals": {
+    "window": true,
+    "document": true,
+    "localStorage": true,
+    "FormData": true,
+    "FileReader": true,
+    "Blob": true,
+    "navigator": true
+  },
+  "settings": {
+    "import/resolver": {
+      "babel-module": {
+        "alias": {
+          "root": ".",
+          "components": "./components",
+          "styles": "./components/styles",
+          "lib": "./lib",
+          "static": "./static"
+        }
+      }
+    }
+  }
+}
